@@ -11,6 +11,9 @@ screen = pygame.display.set_mode((1280, 720),0,32)
 
 plateau = pygame.image.load('plateau.png')
 
+joueur2 = pygame.image.load('joueur2.png')
+joueur = pygame.image.load('joueur.png')
+
 #son = pygame.mixer.Sound("assets/menu.wav")
 
 font = pygame.font.SysFont(None, 50)
@@ -31,50 +34,50 @@ click = False
 
 def jeu():
     card0 = randint(1, 111)
-    sprite_card0 = 'cartes/carte' + str(card0) + '.png'
+    sprite_card0 = 'carte' + str(card0) + '.png'
     card00 = pygame.image.load(sprite_card0).convert_alpha()
     card1 = randint(1, 111)
-    sprite_card1 = 'cartes/carte' + str(card1) + '.png'
+    sprite_card1 = 'carte' + str(card1) + '.png'
     card01 = pygame.image.load(sprite_card1).convert_alpha()
     card2 = randint(1, 111)
-    sprite_card2 = 'cartes/carte' + str(card2) + '.png'
+    sprite_card2 = 'carte' + str(card2) + '.png'
     card02 = pygame.image.load(sprite_card2).convert_alpha()
     card3 = randint(1, 111)
-    sprite_card3 = 'cartes/carte' + str(card3) + '.png'
+    sprite_card3 = 'carte' + str(card3) + '.png'
     card03 = pygame.image.load(sprite_card3).convert_alpha()
     card4 = randint(1, 111)
-    sprite_card4 = 'cartes/carte' + str(card4) + '.png'
+    sprite_card4 = 'carte' + str(card4) + '.png'
     card04 = pygame.image.load(sprite_card4).convert_alpha()
     card5 = randint(1, 111)
-    sprite_card5 = 'cartes/carte' + str(card5) + '.png'
+    sprite_card5 = 'carte' + str(card5) + '.png'
     card05 = pygame.image.load(sprite_card5).convert_alpha()
     card6 = randint(1, 111)
-    sprite_card6 = 'cartes/carte' + str(card6) + '.png'
+    sprite_card6 = 'carte' + str(card6) + '.png'
     card06 = pygame.image.load(sprite_card6).convert_alpha()
     
     #--------------------------------------------------------------------------
     #DECK JOUEUR 2
     
     card7 = randint(1, 111)
-    sprite_card7 = 'cartes/carte' + str(card7) + '.png'
+    sprite_card7 = 'carte' + str(card7) + '.png'
     card07 = pygame.image.load(sprite_card7).convert_alpha()
     card8 = randint(1, 111)
-    sprite_card8 = 'cartes/carte' + str(card8) + '.png'
+    sprite_card8 = 'carte' + str(card8) + '.png'
     card08 = pygame.image.load(sprite_card8).convert_alpha()
     card9 = randint(1, 111)
-    sprite_card9 = 'cartes/carte' + str(card9) + '.png'
+    sprite_card9 = 'carte' + str(card9) + '.png'
     card09 = pygame.image.load(sprite_card2).convert_alpha()
     card10 = randint(1, 111)
-    sprite_card10 = 'cartes/carte' + str(card10) + '.png'
+    sprite_card10 = 'carte' + str(card10) + '.png'
     card010 = pygame.image.load(sprite_card10).convert_alpha()
     card11 = randint(1, 111)
-    sprite_card11 = 'cartes/carte' + str(card11) + '.png'
+    sprite_card11 = 'carte' + str(card11) + '.png'
     card011 = pygame.image.load(sprite_card11).convert_alpha()
     card12 = randint(1, 111)
-    sprite_card12 = 'cartes/carte' + str(card12) + '.png'
+    sprite_card12 = 'carte' + str(card12) + '.png'
     card012 = pygame.image.load(sprite_card12).convert_alpha()
     card13 = randint(1, 111)
-    sprite_card13 = 'cartes/carte' + str(card13) + '.png'
+    sprite_card13 = 'carte' + str(card13) + '.png'
     card013 = pygame.image.load(sprite_card13).convert_alpha()
     
     #-------------------------------------------------------------------------
@@ -136,7 +139,7 @@ def jeu():
                     pixel = sprite_card0
                     random = randint(1, 111)
                     #generating another card
-                    sprite_card0 = 'cartes/carte' + str(random) + '.png'
+                    sprite_card0 = 'carte' + str(random) + '.png'
                     card00 = pygame.image.load(sprite_card0).convert_alpha()
                     dans_le_deck = True
                     pixelload = True
@@ -147,7 +150,7 @@ def jeu():
                     pixel = sprite_card1
                     #generating another card
                     random = randint(1, 111)
-                    sprite_card1 = 'cartes/carte' + str(random) + '.png'
+                    sprite_card1 = 'carte' + str(random) + '.png'
                     card01 = pygame.image.load(sprite_card1).convert_alpha()
                     dans_le_deck = True
                     pixelload = True
@@ -158,7 +161,7 @@ def jeu():
                     pixel = sprite_card2
                     #generating another card
                     random = randint(1, 111)
-                    sprite_card2 = 'cartes/carte' + str(random) + '.png'
+                    sprite_card2 = 'carte' + str(random) + '.png'
                     card02 = pygame.image.load(sprite_card2).convert_alpha()
                     dans_le_deck = True
                     pixelload = True
@@ -169,7 +172,7 @@ def jeu():
                     pixel = sprite_card3
                     #generating another card
                     random = randint(1, 111)
-                    sprite_card3 = 'cartes/carte' + str(random) + '.png'
+                    sprite_card3 = 'carte' + str(random) + '.png'
                     card03 = pygame.image.load(sprite_card3).convert_alpha()
                     dans_le_deck = True
                     pixelload = True
@@ -180,7 +183,7 @@ def jeu():
                     pixel = sprite_card4
                     #generating another card
                     random = randint(1, 111)
-                    sprite_card4 = 'cartes/carte' + str(random) + '.png'
+                    sprite_card4 = 'carte' + str(random) + '.png'
                     card04 = pygame.image.load(sprite_card4).convert_alpha()
                     dans_le_deck = True
                     pixelload = True
@@ -191,7 +194,7 @@ def jeu():
                     pixel = sprite_card5
                     #generating another card
                     random = randint(1, 111)
-                    sprite_card5 = 'cartes/carte' + str(random) + '.png'
+                    sprite_card5 = 'carte' + str(random) + '.png'
                     card05 = pygame.image.load(sprite_card5).convert_alpha()
                     dans_le_deck = True
                     pixelload = True
@@ -202,7 +205,7 @@ def jeu():
                     pixel = sprite_card6
                     #generating another card
                     random = randint(1, 111)
-                    sprite_card6 = 'cartes/carte' + str(random) + '.png'
+                    sprite_card6 = 'carte' + str(random) + '.png'
                     card06 = pygame.image.load(sprite_card6).convert_alpha()
                     dans_le_deck = True
         
@@ -255,14 +258,14 @@ def jeu():
             if points_de_vie <= 0 and points_de_vie_2 > 0:
                 run = False
                 #detecting the game winner and displaying the lost mesage
-                screen.blit(perdeu, (0,0))
+                screen.blit(joueur2, (0,0))
                 pygame.display.update()
                 pygame.time.wait(3000)
                 exit()
             if points_de_vie_2 <= 0 and points_de_vie > 0:
                 run = False
                 #detecting the game winner and displaying the win mesage
-                screen.blit(venceu, (0,0))
+                screen.blit(joueur, (0,0))
                 pygame.display.update()
                 pygame.time.wait(3000)
                 exit()     
@@ -319,7 +322,7 @@ def jeu():
                     pixel2 = sprite_card7
                     #generating another card
                     random = randint(1, 111)
-                    sprite_card7 = 'cartes/carte' + str(random) + '.png'
+                    sprite_card7 = 'carte' + str(random) + '.png'
                     card07 = pygame.image.load(sprite_card7).convert_alpha()
                     dans_le_deck_2 = True
                     pixelload2 = True
@@ -330,7 +333,7 @@ def jeu():
                     pixel2 = sprite_card8
                     #generating another card
                     random = randint(1, 111)
-                    sprite_card8 = 'cartes/carte' + str(random) + '.png'
+                    sprite_card8 = 'carte' + str(random) + '.png'
                     card08 = pygame.image.load(sprite_card8).convert_alpha()
                     dans_le_deck_2 = True
                     pixelload2 = True
@@ -341,7 +344,7 @@ def jeu():
                     pixel2 = sprite_card9
                     #generating another card
                     random = randint(1, 111)
-                    sprite_card9 = 'cartes/carte' + str(random) + '.png'
+                    sprite_card9 = 'carte' + str(random) + '.png'
                     card09 = pygame.image.load(sprite_card9).convert_alpha()
                     dans_le_deck_2 = True
                     pixelload2 = True
@@ -352,7 +355,7 @@ def jeu():
                     pixel2 = sprite_card10
                     #generating another card
                     random = randint(1, 111)
-                    sprite_card10 = 'cartes/carte' + str(random) + '.png'
+                    sprite_card10 = 'carte' + str(random) + '.png'
                     card010 = pygame.image.load(sprite_card10).convert_alpha()
                     dans_le_deck_2 = True
                     pixelload2 = True
@@ -363,7 +366,7 @@ def jeu():
                     pixel2 = sprite_card11
                     #generating another card
                     random = randint(1, 111)
-                    sprite_card11 = 'cartes/carte' + str(random) + '.png'
+                    sprite_card11 = 'carte' + str(random) + '.png'
                     card011 = pygame.image.load(sprite_card11).convert_alpha()
                     dans_le_deck_2 = True
                     pixelload2 = True
@@ -374,7 +377,7 @@ def jeu():
                     pixel2 = sprite_card12
                     #generating another card
                     random = randint(1, 111)
-                    sprite_card12 = 'cartes/carte' + str(random) + '.png'
+                    sprite_card12 = 'carte' + str(random) + '.png'
                     card012 = pygame.image.load(sprite_card12).convert_alpha()
                     dans_le_deck_12 = True
                     pixelload2 = True
@@ -385,7 +388,7 @@ def jeu():
                     pixel2 = sprite_card13
                     #generating another card
                     random = randint(1, 111)
-                    sprite_card13 = 'cartes/carte' + str(random) + '.png'
+                    sprite_card13 = 'carte' + str(random) + '.png'
                     card013 = pygame.image.load(sprite_card13).convert_alpha()
                     dans_le_deck_2 = True
                     pixelload2 = True
@@ -447,14 +450,14 @@ def jeu():
             if points_de_vie <= 0 and points_de_vie_2 > 0:
                 run = False
                 #detecting the game winner and displaying the lost mesage
-                screen.blit(perdeu, (0,0))
+                screen.blit(joueur2, (0,0))
                 pygame.display.update()
                 pygame.time.wait(3000)
                 exit()
             if points_de_vie_2 <= 0 and points_de_vie > 0:
                 run = False
                 #detecting the game winner and displaying the win mesage
-                screen.blit(venceu, (0,0))
+                screen.blit(joueur, (0,0))
                 pygame.display.update()
                 pygame.time.wait(3000)
                 exit()     

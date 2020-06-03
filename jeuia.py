@@ -11,6 +11,9 @@ screen = pygame.display.set_mode((1280, 720),0,32)
 
 plateau = pygame.image.load('plateau.png')
 
+ia = pygame.image.load('ia.png')
+joueur = pygame.image.load('joueur.png')
+
 #son = pygame.mixer.Sound("assets/menu.wav")
 
 font = pygame.font.SysFont(None, 50)
@@ -232,13 +235,13 @@ def jeuia():
         
             if points_de_vie <= 0 and points_de_vie_2 > 0:
                 #detecting the game winner and displaying the lost mesage
-                screen.blit(perdeu, (0,0))
+                screen.blit(ia, (0,0))
                 pygame.display.update()
                 pygame.time.wait(3000)
                 exit()
             if points_de_vie_2 <= 0 and points_de_vie > 0:
                 #detecting the game winner and displaying the win mesage
-                screen.blit(venceu, (0,0))
+                screen.blit(joueur, (0,0))
                 pygame.display.update()
                 pygame.time.wait(3000)
                 exit()     
@@ -410,13 +413,13 @@ def jeuia():
         
             if points_de_vie <= 0 and points_de_vie_2 > 0:
                 #detecting the game winner and displaying the lost mesage
-                screen.blit(perdeu, (0,0))
+                screen.blit(ia, (0,0))
                 pygame.display.update()
                 pygame.time.wait(3000)
                 exit()
             if points_de_vie_2 <= 0 and points_de_vie > 0:
                 #detecting the game winner and displaying the win mesage
-                screen.blit(venceu, (0,0))
+                screen.blit(joueur, (0,0))
                 pygame.display.update()
                 pygame.time.wait(3000)
                 exit()     
