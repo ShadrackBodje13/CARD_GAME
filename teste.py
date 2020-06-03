@@ -30,50 +30,50 @@ click = False
 #  DECK JOUEUR 1
 
 def jeu():
-    card0 = randint(1, 111)
+    card0 = randint(1, 60)
     sprite_card0 = 'cartes/carte' + str(card0) + '.png'
     card00 = pygame.image.load(sprite_card0).convert_alpha()
-    card1 = randint(1, 111)
+    card1 = randint(1, 60)
     sprite_card1 = 'cartes/carte' + str(card1) + '.png'
     card01 = pygame.image.load(sprite_card1).convert_alpha()
-    card2 = randint(1, 111)
+    card2 = randint(1, 60)
     sprite_card2 = 'cartes/carte' + str(card2) + '.png'
     card02 = pygame.image.load(sprite_card2).convert_alpha()
-    card3 = randint(1, 111)
+    card3 = randint(1, 60)
     sprite_card3 = 'cartes/carte' + str(card3) + '.png'
     card03 = pygame.image.load(sprite_card3).convert_alpha()
-    card4 = randint(1, 111)
+    card4 = randint(1, 60)
     sprite_card4 = 'cartes/carte' + str(card4) + '.png'
     card04 = pygame.image.load(sprite_card4).convert_alpha()
-    card5 = randint(1, 111)
+    card5 = randint(1, 60)
     sprite_card5 = 'cartes/carte' + str(card5) + '.png'
     card05 = pygame.image.load(sprite_card5).convert_alpha()
-    card6 = randint(1, 111)
+    card6 = randint(1, 60)
     sprite_card6 = 'cartes/carte' + str(card6) + '.png'
     card06 = pygame.image.load(sprite_card6).convert_alpha()
     
     #--------------------------------------------------------------------------
     #DECK JOUEUR 2
     
-    card7 = randint(1, 111)
+    card7 = randint(1, 60)
     sprite_card7 = 'cartes/carte' + str(card7) + '.png'
     card07 = pygame.image.load(sprite_card7).convert_alpha()
-    card8 = randint(1, 111)
+    card8 = randint(1, 60)
     sprite_card8 = 'cartes/carte' + str(card8) + '.png'
     card08 = pygame.image.load(sprite_card8).convert_alpha()
-    card9 = randint(1, 111)
+    card9 = randint(1, 60)
     sprite_card9 = 'cartes/carte' + str(card9) + '.png'
     card09 = pygame.image.load(sprite_card2).convert_alpha()
-    card10 = randint(1, 111)
+    card10 = randint(1, 60)
     sprite_card10 = 'cartes/carte' + str(card10) + '.png'
     card010 = pygame.image.load(sprite_card10).convert_alpha()
-    card11 = randint(1, 111)
+    card11 = randint(1, 60)
     sprite_card11 = 'cartes/carte' + str(card11) + '.png'
     card011 = pygame.image.load(sprite_card11).convert_alpha()
-    card12 = randint(1, 111)
+    card12 = randint(1, 60)
     sprite_card12 = 'cartes/carte' + str(card12) + '.png'
     card012 = pygame.image.load(sprite_card12).convert_alpha()
-    card13 = randint(1, 111)
+    card13 = randint(1, 60)
     sprite_card13 = 'cartes/carte' + str(card13) + '.png'
     card013 = pygame.image.load(sprite_card13).convert_alpha()
     
@@ -110,16 +110,13 @@ def jeu():
     
     pixelload = False
     pixelload2 = False
-    tour = 1
-    run = True
     
-    #-----------------------------------------------------------------------------------------
-    #TOUR JOUEUR 1
-    
-    #Main loop:
-    while tour != 14 :
-        run = True
-        if tour % 2 == 0 :
+    gamerunning = True
+    player1 = True
+    player2 = False
+
+    while gamerunning:
+        while player1 :
             for event in pygame.event.get():
                 if event.type == QUIT:
                     #exit command
@@ -134,7 +131,7 @@ def jeu():
                 if dans_le_deck == False:
                     #first card in battle
                     pixel = sprite_card0
-                    random = randint(1, 111)
+                    random = randint(1, 23)
                     #generating another card
                     sprite_card0 = 'cartes/carte' + str(random) + '.png'
                     card00 = pygame.image.load(sprite_card0).convert_alpha()
@@ -146,7 +143,7 @@ def jeu():
                     #second card in battle
                     pixel = sprite_card1
                     #generating another card
-                    random = randint(1, 111)
+                    random = randint(1, 23)
                     sprite_card1 = 'cartes/carte' + str(random) + '.png'
                     card01 = pygame.image.load(sprite_card1).convert_alpha()
                     dans_le_deck = True
@@ -157,7 +154,7 @@ def jeu():
                     #third card in battle
                     pixel = sprite_card2
                     #generating another card
-                    random = randint(1, 111)
+                    random = randint(1, 23)
                     sprite_card2 = 'cartes/carte' + str(random) + '.png'
                     card02 = pygame.image.load(sprite_card2).convert_alpha()
                     dans_le_deck = True
@@ -168,7 +165,7 @@ def jeu():
                     #third card in battle
                     pixel = sprite_card3
                     #generating another card
-                    random = randint(1, 111)
+                    random = randint(1, 23)
                     sprite_card3 = 'cartes/carte' + str(random) + '.png'
                     card03 = pygame.image.load(sprite_card3).convert_alpha()
                     dans_le_deck = True
@@ -179,7 +176,7 @@ def jeu():
                     #third card in battle
                     pixel = sprite_card4
                     #generating another card
-                    random = randint(1, 111)
+                    random = randint(1, 23)
                     sprite_card4 = 'cartes/carte' + str(random) + '.png'
                     card04 = pygame.image.load(sprite_card4).convert_alpha()
                     dans_le_deck = True
@@ -190,7 +187,7 @@ def jeu():
                     #third card in battle
                     pixel = sprite_card5
                     #generating another card
-                    random = randint(1, 111)
+                    random = randint(1, 23)
                     sprite_card5 = 'cartes/carte' + str(random) + '.png'
                     card05 = pygame.image.load(sprite_card5).convert_alpha()
                     dans_le_deck = True
@@ -201,7 +198,7 @@ def jeu():
                     #third card in battle
                     pixel = sprite_card6
                     #generating another card
-                    random = randint(1, 111)
+                    random = randint(1, 23)
                     sprite_card6 = 'cartes/carte' + str(random) + '.png'
                     card06 = pygame.image.load(sprite_card6).convert_alpha()
                     dans_le_deck = True
@@ -209,39 +206,23 @@ def jeu():
                 
             if key[K_SPACE] and pixelload == True:
                 #detecting the battle force
-                
-                if random == 100 or random == 101 or random == 102 or random == 103 or random == 104 or random == 105 or random == 106 or random == 107 or random == 108 or random == 109 or random == 110 :
-                    battle_force = 500
-
-                if random == 111 :
-                    battle_force = 900
-
-                else :
-                    battle_force=200
-
+                battle_force=200
                 points_de_vie_2 = points_de_vie_2 - battle_force
                 
                 pixel = 'pixel.png'
                 pixelload = False
-                tour = tour + 1
+                player1 = False
+                player2 = True
         
             if key[K_RETURN] and pixelload == True:
                 #detecting the battle force
-                
-                if random == 100 or random == 101 or random == 102 or random == 103 or random == 104 or random == 105 or random == 106 or random == 107 or random == 108 or random == 109 or random == 110 :
-                    battle_defense = 250
-
-                if random == 111 :
-                    battle_defense = 500
-
-                else :
-                    battle_defense=50
-
+                battle_defense=50
                 points_de_vie  = points_de_vie + battle_defense
                 
                 pixel = 'pixel.png'
                 pixelload = False
-                tour = tour + 1
+                player1 = False
+                player2 = True
             
             
             if key[K_TAB]:
@@ -253,14 +234,14 @@ def jeu():
             vida2 = font.render(str(points_de_vie_2), 1, (255, 0, 0))
         
             if points_de_vie <= 0 and points_de_vie_2 > 0:
-                run = False
+                gamerunning = False
                 #detecting the game winner and displaying the lost mesage
                 screen.blit(perdeu, (0,0))
                 pygame.display.update()
                 pygame.time.wait(3000)
                 exit()
             if points_de_vie_2 <= 0 and points_de_vie > 0:
-                run = False
+                gamerunning = False
                 #detecting the game winner and displaying the win mesage
                 screen.blit(venceu, (0,0))
                 pygame.display.update()
@@ -296,13 +277,8 @@ def jeu():
             #updating
             pygame.display.update()
             #Limiting the fps to 10
-        
-    
-    #-----------------------------------------------------------------------------------------------
-    
-    #TOUR JOUEUR 2
-    
-        if tour % 2 == 1 :
+
+        while player2 :
             for event in pygame.event.get():
                 if event.type == QUIT:
                     #exit command
@@ -318,7 +294,7 @@ def jeu():
                     #first card in battle
                     pixel2 = sprite_card7
                     #generating another card
-                    random = randint(1, 111)
+                    random = randint(1, 23)
                     sprite_card7 = 'cartes/carte' + str(random) + '.png'
                     card07 = pygame.image.load(sprite_card7).convert_alpha()
                     dans_le_deck_2 = True
@@ -329,7 +305,7 @@ def jeu():
                     #second card in battle
                     pixel2 = sprite_card8
                     #generating another card
-                    random = randint(1, 111)
+                    random = randint(1, 23)
                     sprite_card8 = 'cartes/carte' + str(random) + '.png'
                     card08 = pygame.image.load(sprite_card8).convert_alpha()
                     dans_le_deck_2 = True
@@ -340,29 +316,29 @@ def jeu():
                     #third card in battle
                     pixel2 = sprite_card9
                     #generating another card
-                    random = randint(1, 111)
+                    random = randint(1, 23)
                     sprite_card9 = 'cartes/carte' + str(random) + '.png'
                     card09 = pygame.image.load(sprite_card9).convert_alpha()
                     dans_le_deck_2 = True
                     pixelload2 = True
-        
+            
             if key[K_4]:
                 if dans_le_deck_2 == False:
                     #third card in battle
                     pixel2 = sprite_card10
                     #generating another card
-                    random = randint(1, 111)
+                    random = randint(1, 23)
                     sprite_card10 = 'cartes/carte' + str(random) + '.png'
                     card010 = pygame.image.load(sprite_card10).convert_alpha()
                     dans_le_deck_2 = True
                     pixelload2 = True
-        
+            
             if key[K_5]:
                 if dans_le_deck_2 == False:
                     #third card in battle
                     pixel2 = sprite_card11
                     #generating another card
-                    random = randint(1, 111)
+                    random = randint(1, 23)
                     sprite_card11 = 'cartes/carte' + str(random) + '.png'
                     card011 = pygame.image.load(sprite_card11).convert_alpha()
                     dans_le_deck_2 = True
@@ -373,7 +349,7 @@ def jeu():
                     #third card in battle
                     pixel2 = sprite_card12
                     #generating another card
-                    random = randint(1, 111)
+                    random = randint(1, 23)
                     sprite_card12 = 'cartes/carte' + str(random) + '.png'
                     card012 = pygame.image.load(sprite_card12).convert_alpha()
                     dans_le_deck_12 = True
@@ -384,7 +360,7 @@ def jeu():
                     #third card in battle
                     pixel2 = sprite_card13
                     #generating another card
-                    random = randint(1, 111)
+                    random = randint(1, 23)
                     sprite_card13 = 'cartes/carte' + str(random) + '.png'
                     card013 = pygame.image.load(sprite_card13).convert_alpha()
                     dans_le_deck_2 = True
@@ -393,37 +369,23 @@ def jeu():
                 
             if key[K_SPACE] and pixelload2 == True:
                 #detecting the battle force
-                if random == 100 or random == 101 or random == 102 or random == 103 or random == 104 or random == 105 or random == 106 or random == 107 or random == 108 or random == 109 or random == 110 :
-                    battle_force_2 = 500
-
-                if random == 111 :
-                    battle_force_2 = 900
-
-                else :
-                    battle_force_2=200
-        
-                #detecting the enemy battle force
-                #if sprite_op=='cartes/carte1.png':
-                    #c_battle_force=1000
-        
-                #detecting damage
-                points_de_vie = points_de_vie - battle_force_2
-                
+                battle_force2 = 200
+    
+        #detecting the enemy battle force
+        #if sprite_op=='cartes/carte1.png':
+            #c_battle_force=1000
+    
+        #detecting damage
+                points_de_vie = points_de_vie - battle_force2
+            
                 pixel2 = 'pixel2.png'
                 pixelload2 = False
-                tour = tour + 1
+                player2 = False
+                player1 = True
     
             if key[K_RETURN] and pixelload2 == True:
                 #detecting the battle force
-
-                if random == 100 or random == 101 or random == 102 or random == 103 or random == 104 or random == 105 or random == 106 or random == 107 or random == 108 or random == 109 or random == 110 :
-                    battle_defense_2 = 250
-
-                if random == 111 :
-                    battle_defense_2 = 500
-
-                else :
-                    battle_defense_2=50
+                battle_defense_2=50
         
                 #detecting the enemy battle force
                 #if sprite_op=='cartes/carte1.png':
@@ -431,10 +393,11 @@ def jeu():
         
                 #detecting damage
                 points_de_vie_2  = points_de_vie_2 + battle_defense_2
-                
+                    
                 pixel2 = 'pixel2.png'
                 pixelload2 = False
-                tour = tour + 1
+                player2 = False
+                player1 = True
             
             if key[K_TAB]:
                 #changing the boolean variable to change the card in battle
@@ -445,14 +408,14 @@ def jeu():
             vida2 = font.render(str(points_de_vie_2), 1, (255, 0, 0))
         
             if points_de_vie <= 0 and points_de_vie_2 > 0:
-                run = False
+                gamerunning = False
                 #detecting the game winner and displaying the lost mesage
                 screen.blit(perdeu, (0,0))
                 pygame.display.update()
                 pygame.time.wait(3000)
                 exit()
             if points_de_vie_2 <= 0 and points_de_vie > 0:
-                run = False
+                gamerunning = False
                 #detecting the game winner and displaying the win mesage
                 screen.blit(venceu, (0,0))
                 pygame.display.update()
@@ -488,3 +451,5 @@ def jeu():
             #updating
             pygame.display.update()
             #Limiting the fps to 10
+
+jeu()

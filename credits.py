@@ -1,16 +1,15 @@
 # Setup Python
 import pygame, sys
-from jeu import *
-from jeuia import *
 
 #Création de la page
 mainClock = pygame.time.Clock()
+from random import randint
 from pygame import *
 pygame.init()
 pygame.display.set_caption('RAP GAME')
 screen = pygame.display.set_mode((1280, 720),0,32)
 
-background_1 = pygame.image.load('background2.png')
+essaie = pygame.image.load('essaie.png')
 
 #son = pygame.mixer.Sound("assets/menu.wav")
 
@@ -22,32 +21,30 @@ def text(text, font, color, surface, x, y):
 	textrect.topleft = (x, y)
 	surface.blit(textobj, textrect) 
 
-click = False 
+clock = pygame.time.Clock()
 
+click = False 
 
 #------------------------------------------------------------------------------
 
-def modedejeu():
+def credits():
+	
 	running = True
-	while True:				
-		
-		screen.blit(background_1, (0,0))
-		text('choix', font, (255, 255, 255), screen, 20, 20)
+	while True:
+		screen.blit(essaie, (0,0))
 
-		key = pygame.key.get_pressed()
-		if key[K_LEFT]:
-			jeu()
-
-		if key[K_RIGHT]:
-			jeuia()
-
+		click = False
 		for event in pygame.event.get():
-			if event.type == QUIT:
+			if event.type == QUIT:	
 				pygame.quit()
 				sys.exit()
 			if event.type == KEYDOWN:
 				if event.key == K_ESCAPE:
-					running = False
-       
+					pygame.quit()
+					sys.exit()
+					menu()
+			if event.type == MOUSEBUTTONDOWN:
+				if event.button == 1:
+					click = True
 		pygame.display.update()
 		mainClock.tick(60)

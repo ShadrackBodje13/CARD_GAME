@@ -1,7 +1,5 @@
 # Setup Python
 import pygame, sys
-from jeu import *
-from jeuia import *
 
 #Création de la page
 mainClock = pygame.time.Clock()
@@ -24,30 +22,7 @@ def text(text, font, color, surface, x, y):
 
 click = False 
 
-
 #------------------------------------------------------------------------------
 
-def modedejeu():
-	running = True
-	while True:				
-		
-		screen.blit(background_1, (0,0))
-		text('choix', font, (255, 255, 255), screen, 20, 20)
-
-		key = pygame.key.get_pressed()
-		if key[K_LEFT]:
-			jeu()
-
-		if key[K_RIGHT]:
-			jeuia()
-
-		for event in pygame.event.get():
-			if event.type == QUIT:
-				pygame.quit()
-				sys.exit()
-			if event.type == KEYDOWN:
-				if event.key == K_ESCAPE:
-					running = False
-       
-		pygame.display.update()
-		mainClock.tick(60)
+def options(self, nom, img, valeur, cout, attaque, defense, position_x, position_y, height, width):
+	self.cartes.append(carte)

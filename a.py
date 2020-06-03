@@ -1,10 +1,7 @@
 # Setup Python
 import pygame, sys
 from modedejeu import modedejeu
-from jeu import *
-from jeuia import *
-from instructions import instructions
-from credits import credits
+from options import options
 
 
 
@@ -45,7 +42,7 @@ def menu():
 
 		if button_1.collidepoint((mx, my)):
 			if click:
-				modedejeu()
+				jeu()
 
 		if button_2.collidepoint((mx, my)):
 			if click:
